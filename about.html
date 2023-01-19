@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <h1 class="d-flex justify-content-center mb-5 mt-5">Expense Tracker</h1>
+    <form class="form d-flex justify-content-center mb-5">
+      <span class="fw-bolder m-1"
+        >Name: <input class="m-1" id="inputName" type="text"
+      /></span>
+      <span class="fw-bolder m-1"
+        >Date: <input class="m-1" id="inputDate" type="date"
+      /></span>
+      <span class="fw-bolder m-1"
+        >Amount: <input type="number" class="totalAmount m-1" id="inputAmount"
+      /></span>
+      <span class="fw-bolder m-1"
+        >Remarks <input class="m-1" id="inputRemarks" type="text"
+      /></span>
+      <button class="m-1" id="inputButton">
+        <i class="icon-level-down fs-4"></i>
+      </button>
+      <!-- How to delete specific row -->
+      <button class="m-1" type="button" id="deleteSelection">
+        <i class="icon-remove-sign fs-4"></i>
+      </button>
+    </form>
+    <table class="table m-5" id="displayTable">
+      <thead>
+        <tr id="numero">
+          <th scope="col">
+            <i class="icon-file-text fw-bolder fs-3"></i> Description
+          </th>
+          <th scope="col"><i class="icon-calendar fw-bolder fs-3"></i> Date</th>
+          <th scope="col"><i class="icon-usd fw-bolder fs-3"></i> Amount</th>
+          <th scope="col"><i class="icon-pencil fs-3"></i> Remarks</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <!-- //passing total amount?? -->
+    <span class="d-flex justify-content-center"
+      >Total: <input type="number" id="total" value="0" disabled
+    /></span>
+
+    <script src="main.js"></script>
+  </body>
+</html>
